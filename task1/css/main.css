@@ -1,0 +1,185 @@
+div.container{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+
+div.head {
+	position: absolute;
+	left: 13%;
+	top: 15%;
+	background: radial-gradient(circle at center 65%, white, rgb(245, 226, 26) 60%);
+  	border: 3px solid rgb(143, 140, 135);
+ 	border-radius: 50%;
+ 	height: 70%;
+ 	width: 70%;
+ 	z-index: 2;
+}
+
+div.left_ear{
+	position: absolute;
+	left: 18%;
+	top: 12%;
+	background: radial-gradient(circle at center center, white, rgb(143, 140, 135) 60%);
+ 	border-radius: 50%;
+ 	height: 18%;
+ 	width: 18%;
+ 	z-index: 1;
+}
+
+div.right_ear{
+	position: absolute;
+	right: 18%;
+	top: 12%;
+	background: radial-gradient(circle at center center, white, rgb(143, 140, 135) 60%);
+ 	border-radius: 50%; /*или 50%*/
+ 	height: 18%;
+ 	width: 18%;
+ 	z-index: 1;
+}
+
+div.left_shadow {
+	position: absolute;
+	left: 20%;
+	top: 40%;
+ 	width: 30%;
+ 	height: 18%;
+ 	transform: rotate(-61deg); 
+ 	background: rgb(89, 87, 88);
+ 	border-radius: 50%;
+	z-index: 3;
+}
+
+div.right_shadow {
+	position: absolute;
+	right: 20%;
+	top: 40%;
+ 	width: 30%;
+ 	height: 18%;
+ 	transform: rotate(61deg); 
+ 	background: rgb(89, 87, 88);
+ 	border-radius: 50%;
+	z-index: 3;
+}
+
+div.nose {
+	position: absolute;
+	left: 44%; /*50px - width/2*/
+	top: 60%;
+ 	width: 12%;
+ 	height: 7%;
+ 	background: rgb(89, 87, 88);
+ 	background: radial-gradient(circle at center center, black 1%, white);
+ 	border-radius: 50%;
+	z-index: 4;
+}
+
+div.left_eye_external {
+	position: absolute;
+	left: 31%;
+	top: 41%;
+	background: white;
+ 	border-radius: 50%;
+ 	height: 10%;
+ 	width: 10%;
+ 	z-index: 4;
+}
+
+div.right_eye_external {
+	position: absolute;
+	right: 31%;
+	top: 41%;
+	background: white;
+ 	border-radius: 50%;
+ 	height: 10%;
+ 	width: 10%;
+ 	z-index: 4;
+}
+
+div.left_eye_internal {
+	position: absolute;
+	left: 34%;
+	top: 42%;
+	background: rgb(89, 87, 88);
+ 	border-radius: 50%;
+ 	height: 8%;
+ 	width: 8%;
+ 	z-index: 4;
+}
+
+div.right_eye_internal {
+	position: absolute;
+	right: 34%;
+	top: 42%;
+	background: rgb(89, 87, 88);
+ 	border-radius: 50%;
+ 	height: 8%;
+ 	width: 8%;
+ 	z-index: 4;
+}
+
+div.left_moustache{
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	top: 57%;
+	left: 28%;
+	border-left: 2px solid black;
+	border-right: transparent;
+	border-bottom: transparent;
+	border-top: transparent;
+	border-radius: 37%;
+	transform: rotate(218deg);
+	z-index: 3;
+}
+
+div.right_moustache{
+	position: absolute;
+	width: 20%;
+	height: 20%;
+	top: 57%;
+	right: 28%;
+	border-left: 2px solid black;
+	border-right: transparent;
+	border-bottom: transparent;
+	border-top: transparent;
+	border-radius: 37%;
+	transform: rotate(-40deg);
+	z-index: 3;
+}
+
+div.butterfly {
+	position: relative;
+	width: 70%;
+	height: 70%;
+	left: 39%;
+	top: 85%;
+	z-index: 4;
+}
+
+.butterfly:before,
+.butterfly:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 10%;
+	background-color: red;
+	border: 2px solid red;
+}
+
+div.butterfly:before {
+	 /*top-left | top-right | bottom-right | bottom-left */
+
+	border-radius: 60% 90% 0% 90%; 
+	transform: rotate(-45deg); 
+}
+
+div.butterfly:after {
+	left: 18%;
+	right: 0%;
+	border-radius: 90% 60% 90% 0%;
+	transform:rotate(45deg);
+}

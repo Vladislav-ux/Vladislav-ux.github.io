@@ -1,0 +1,58 @@
+.logo-rectangle1 {
+    width:10%;
+    background:rgb(235, 108, 35);;
+}
+
+.logo-rectangle2 {
+    width:10%;
+	height:90%;    
+    background:rgb(235, 108, 35);
+}
+
+.logo-rectangle3 {
+    width:10%;
+	height:80%;    
+    background:rgb(235, 108, 35);
+}
+
+.logo-rectangle4 {
+    width:10%;
+    height:20%;
+    background:rgb(235, 108, 35);
+}
+
+.logo-rectangle2 {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.logo-rectangle3 {
+	margin-right: 2%;
+}
+
+.logo-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 7px solid rgb(235, 108, 35);;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-top: 13px;
+	margin-left: 27px;
+}
+
+.logo-wrapper {
+	display: flex;
+	width: 100px;
+	height: 100px;
+}
+
+.logo-container {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+}
+

@@ -1,0 +1,120 @@
+.main {
+	display: flex;
+	justify-content: left;
+}
+
+.imgs {
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+.texts {
+	top:-80%;
+	left: 0%;
+	position: relative;
+	visibility: hidden;
+}
+
+.attantion_text {
+	opacity: 0;
+}
+
+.fire_text {
+	position: absolute;
+	top: 0%;
+	left: 45%;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.guns {
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+	background-image: url("../images/gun1.png");
+	transform: rotate(45deg);
+}
+
+.bullet {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 250px;
+	height: 250px;
+	background-image: url("../images/gun3.png");
+	visibility: hidden;
+}
+
+span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.button_gun {
+	width: 900px;
+	height: 250px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+
+/*Реакция после нажатия на кнопку*/
+
+.button_gun:hover 
+.attantion_text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.button_gun:focus 
+.fire_text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.button_gun:focus 
+.attantion_text {
+	visibility: hidden;
+}
+
+/*Поворот пистолета*/
+.button_gun:hover 
+.guns {
+	background-image: url("../images/gun1.png");
+	transform: rotate(0deg);
+	transition: all 1s ease;
+
+}
+
+.button_gun:focus
+.guns {
+	background-image: url("../images/gun2.png");
+	transform: rotate(0deg);
+	transition: all 1s ease;
+	animation: updown .3s ease;
+}
+
+.button_gun:focus 
+.bullet {
+	visibility: visible;
+	transform: translate(700px, 0);
+	transition: all .6s ease;
+}
+
+
+/*Тряска флекса*/
+
+@keyframes updown {
+  0% {
+    transform: translateY(-4px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  100% {
+    transform: translateY(-4px);
+  }
+}
