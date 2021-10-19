@@ -163,6 +163,7 @@ hr {
 
 .header-content {
 	display: flex;
+	/*flex-wrap:wrap;*/
 	/*background: black;*/
 }
 
@@ -236,7 +237,14 @@ hr {
 .about-us-content {
 	display: flex;
 	justify-content: space-between;
+	/*flex-wrap:wrap;*/
 	margin-top: 70px;
+}
+
+.about-us-content div{
+	max-width: 150px;
+	height: 200px;
+	border: 1px solid black;
 }
 
 .people h1, 
@@ -282,11 +290,6 @@ hr {
 	margin-right: 10%;
 }
 
-.about-us-content div{
-	width: 150px;
-	height: 200px;
-	border: 1px solid black;
-}
 /*================================*/
 
 .section-zero {
@@ -314,8 +317,10 @@ hr {
   	background-color: lavender;
 }
 
+
 .one-place {
 	display: flex;
+	/*flex-wrap:wrap;*/
 	max-width: 1000px;
 	height:  auto;
 	margin: 0 auto;
@@ -327,6 +332,7 @@ hr {
 
 .switching {
 	display: flex;
+	/*flex-wrap:wrap;*/
 	max-width: 1000px;
 	height:  500px;
 	margin: 0 auto;
@@ -522,3 +528,131 @@ label {
 .footer-icons li{
 	padding-right: 5px;
 }
+
+/*===================================*/
+/*
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		width: 960px;
+	}
+	.desc-left, .desc-right {
+		width: 48%;
+	}
+	.gallery img:nth-child(1) {
+		width: 23%;
+	}
+	.gallery img:nth-child(2) {
+		width: 23%;
+	}
+	.gallery img:nth-child(3) {
+		width: 48%;
+	}
+}*/
+
+@media screen and (max-width: 991px) {
+	header.container {
+		width: 720px;
+	}
+
+	.header-text {
+		width: 50%;
+	}
+
+	.header-img img{
+		max-width: 90%;
+		height: auto;
+		padding-top: 10%;
+		padding-left: 20%;
+	}	
+}
+
+@media screen and (max-width: 767px) {
+	header.container, 
+	about-us{
+		width: 540px;
+	}
+
+	hr {
+		max-width: 60%;
+	}
+
+	.header-content {
+		flex-wrap: wrap;
+	}
+
+	.header-text, 
+	.header-img{
+		width: 100%;
+	}
+
+	.header-text {
+		padding-bottom: 0px;
+	}
+
+	.header-text h1{
+		padding-top: 10%;
+	}
+
+	.header-img {
+		margin-bottom: 5%;
+	}
+
+	.logo-container {
+		width: 10%;
+		margin-left: 5%;
+		margin-top: 5%;
+	}
+
+	.menu ul{
+		flex-wrap: wrap;
+		padding-left: 10%;
+	}
+
+	.about-us-content {
+		flex-wrap: wrap;
+		margin-top: 5%;
+	}
+
+	.employee {
+		margin-right: 10%;
+	}
+
+	.company {
+		margin-top: 5%;
+		margin-left: 10%;
+	}
+
+	.security {
+		margin-top: 5%;
+	}
+
+/*	.one-place,
+	.switching,
+	.grouping {
+		flex-wrap: wrap;
+	}*/
+
+
+}
+
+/*@media screen and (max-width: 575px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.offer h1 {
+		font-size: 80px;
+	}
+	.tel {
+		display: none;
+	}
+	.menu-open {
+		margin-left: auto;
+	}
+}*/
