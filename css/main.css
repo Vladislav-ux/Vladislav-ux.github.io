@@ -405,6 +405,21 @@ hr {
 
 /*=======================*/
 
+.section-name h1{
+	margin: 0, auto;
+}
+
+.section-name {
+	max-width: 1000px;
+	height:  auto;
+	margin: 0 auto;
+	padding-top: 4%;
+}
+
+span {
+	color: rgb(217, 94, 19);
+}
+
 .contact-us{
 	display:block;
     margin:0 auto;
@@ -689,6 +704,11 @@ label {
 		margin: 0 auto;
 		margin-bottom: 5%;
 	}
+}
 
-
+@media screen and (max-width: 480px) {
+	.footer-ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
