@@ -506,6 +506,11 @@ label {
 
 .footer-li {
 	display: list-item;
+	/*width: 100px;*/
+	/*height: 50px;*/
+	/*margin-left: 5%;*/
+	/*margin-right: 5%;*/
+
 	/*padding-top: 20px;*/
 	/*padding-left: 40px;*/
 	/*padding-right: 40px;*/
@@ -685,5 +690,12 @@ label {
 	.footer-ul{
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: normal;
+	}
+
+	.footer-li {
+		margin-right: 10%;
+		margin-left: 10%;
+		margin-top: 5%;
 	}
 }
