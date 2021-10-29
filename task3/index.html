@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Triangle</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
+<body>
+
+	<header class="header">
+		<div>
+			<h1>Task 3 - Triangle</h1>
+		</div>
+	</header>
+
+	<h3 id="output-text">Треугольник с данными сторонами не существует</h3>
+	<img id="img" src="img/tr-4.jpg">
+
+ 	<script type="text/javascript">
+		var x1 = parseFloat(prompt('Введите первую сторону')),
+			x2 = parseFloat(prompt('Введите вторую сторону')),
+			x3 = parseFloat(prompt('Введите третью сторону')),
+			img = document.getElementById('img')
+
+		if ((x1 + x2) > x3 && (x1 + x3) > x2 && (x2 + x3) > x1) {
+			if(x1==x2 && x2==x3){
+				document.getElementById('output-text').innerHTML = "Треугольник равносторонний"
+				img.setAttribute('src', 'img/tr-3.jpg')
+			}else if(x1==x2 || x1==x3 || x2==x3){
+				document.getElementById('output-text').innerHTML = "Треугольник равнобедренный"
+				img.setAttribute('src', 'img/tr-2.jpg')
+			}else {
+				document.getElementById('output-text').innerHTML = "Треугольник с данными сторонами существует"
+				img.setAttribute('src', 'img/tr-1.jpg')
+			}
+		} else {
+			document.getElementById('output-text').innerHTML = "Треугольник с данными сторонами не существует"
+			img.setAttribute('src', 'img/tr-4.jpg')
+		}
+	</script>
+
+	<div class="get-btn">
+		<a href="../index.html">НАЗАД</a>
+	</div>
+
+</body>
+</html>
