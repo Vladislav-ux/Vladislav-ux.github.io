@@ -37,6 +37,46 @@ hr {
     margin: 0 auto;
 }
 
+.hr{
+	padding-top: 5%;
+  	background-color: lavender;
+}
+
+.one-place-header h1,
+.contact-us h1 {
+	font-size: 2.6em;
+	line-height: 1.5;
+}
+
+.about-us-text h1{
+	font-size: 2em;
+	line-height: 1.5;
+}
+
+.about-us-text p{
+	font-size: 1.2em;
+}
+
+.one-place-text h1,
+.switching-text h1,
+.grouping-text h1{
+	font-size: 2em;
+	line-height: 1.3;
+}
+
+.one-place-text p,
+.switching-text p,
+.grouping-text p{
+	font-size: 1.2em;
+}
+
+.one-place-text h2,
+.switching-text h2,
+.grouping-text h2{
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
 .header {
 	/*margin-top: 20px;*/
 	background: black;
@@ -321,7 +361,7 @@ hr {
 
 
 .one-place-header{
-	padding-top: 10%;
+	padding-top: 7%;
 	padding-bottom: 2%;
 }
 
@@ -423,14 +463,14 @@ span {
     margin:0 auto;
     max-width:1000px;
     height: auto;
-    padding-top: 10%;
+    padding-top: 7%;
     /*border: 1px solid black;*/
 }
 
 .contact-us h1{
 	display: block;
 	/*margin-top: 5%;*/
-	margin-bottom: 2%;
+	margin-bottom: 3%;
 	text-align: center;
 }
 
