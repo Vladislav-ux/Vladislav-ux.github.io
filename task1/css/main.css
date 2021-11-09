@@ -200,10 +200,10 @@ div.right_moustache{
 
 div.butterfly {
 	position: relative;
-	width: 70%;
-	height: 70%;
-	left: 39%;
-	top: 85%;
+	width: 45%;
+	height: 45%;
+	left: 42%;
+	top: 84%;
 	z-index: 4;
 }
 
@@ -213,8 +213,8 @@ div.butterfly {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 10%;
-	height: 10%;
+	width: 12%;
+	height: 12%;
 	background-color: red;
 	border: 2px solid red;
 }
