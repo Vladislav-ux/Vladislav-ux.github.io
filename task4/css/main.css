@@ -1,0 +1,93 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: lavender;
+}
+
+h3{
+	margin-top: 3%;
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	/*padding: 0;*/
+	/*margin: 0;*/
+	background: black;
+}
+
+.header h1{
+	color: white;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+.get-btn {
+	width: 195px;
+	margin: 0 auto;
+}
+
+.get-btn a:hover{
+	background: rgb(217, 94, 19);
+}
+
+.get-btn a{
+	color: white;
+	background: rgb(235, 108, 35);
+	font-size: 18px;
+	padding: 18px 30px;
+	margin-top: 80px;
+	font-weight: 700;
+	display: block;
+	width: 195px;
+	text-align: center;
+}
+
+section {
+	/*border: 1px solid black;*/
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+input {
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+.buttons {
+	border: 2px solid black;
+	padding-left: 5%;
+	padding-top: 5%;
+	padding-bottom: 3%;	
+	margin-top: 10%;
+}
+
+.container {
+	border: 2px solid black;
+	margin-top: 30px;
+}
+
+#textarea {
+	margin-left: 5%;
+	margin-top: 8%;
+	max-width: 300px;
+}
+
+#newButton {
+	margin-right: 2%;
+	margin-bottom: 2%;
+}

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="scripts/require.js"></script>
+
+    <title>Игра</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="header">
+        <div id="name"></div>  
+        <div id="score"></div>        
+        <div id="level"></div>              
+    </div>
+    <div class="wrapper">
+        <div class="task">
+            <div id="title"></div>        
+        </div>
+
+        <div class="info">
+            <div id="lines"></div>
+            <div id="parts"></div>
+        </div>
+
+        <div id="timer"></div>        
+    </div>
+
+    <div class="main">
+        <canvas width="600" height="470" id="Canvas">
+        </canvas>
+
+        <div class="interface">
+            <input type="button" value="Перезапустить уровень" id="restart">
+            <input type="button" value="На следующий уровень" id="nextlvl" hidden>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(230, 231, 232);
+}
+
+.main {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+}
+
+#name, 
+#score,
+#level {
+    border: 1px solid black;
+    padding-top: 2%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#name {
+    padding-left: 4%;
+}
+
+#level {
+    padding-right: 4%;
+}
+
+
+#title {
+    padding-top: 2%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.01em;
+    color: rgb(235, 108, 35);
+}
+
+#timer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#lines {
+    padding-left: 15%;
+}
+
+#parts {
+    padding-right: 15%;
+}
+
+#timer {
+    font-size: 1.06em;
+    color: red;
+}
+
+#lines,
+#parts {
+    padding-top: 2%;
+    /*color: white;*/
+    font-weight: 600;
+    font-size: 1.06em;
+    color: rgb(235, 108, 35);
+}
+
+.task {
+    width: 700px;
+    height: 50px;
+    margin:  0 auto;
+}
+
+.wrapper {
+    background-color: rgb(80, 80, 80);
+    width: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: black;
+}
+
+.header,
+.info {
+    display: flex;
+    /*border: 1px solid black;*/
+    height: 50px;
+    width: 700px;
+    margin:  0 auto;
+    justify-content: space-between;
+}
+
+.interface {
+    padding-top: 20px;
+
+}
+
+canvas {
+    border: 4px solid black;
+    background-color: white;
+    margin-top: 20px;
+}
