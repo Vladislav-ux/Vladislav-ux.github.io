@@ -20,7 +20,7 @@ $(document).ready(function(){
 	var kx = lvls[curlvl][0]; //для таймера (в минутах)
 	var ks = 0; //секунды
 	var timer; //сам таймер
-	var gameTimer;
+	var gameTimer = new Date(); //время в игре
 	var sqq = [[-150,-150,-150,150],
               [-150,150,150,150],
               [150,150,150,-150],
@@ -75,7 +75,6 @@ $(document).ready(function(){
 	
 	//сброс уровня
 	function restart(){
-		gameTimer = new Date();
 		nodraw = false;
 		lines = [];
 		hulls = [];
@@ -95,18 +94,29 @@ $(document).ready(function(){
 			+ "за " + min + " мин " + (Math.floor(tmp/1000) - min*60) + " сек!");
 		nodraw = true;
 	}
+
+	//конец игры если сдались
+	function endgameifpass(){
+		let tmp = new Date() - gameTimer;
+		let min = Math.floor(tmp/60000);
+		alert("Вам удалось дойти до " + (curlvl + 1) + " уровня!\n"
+			+ "Вы набрали " + score + " очков "
+			+ "за " + min + " мин " + (Math.floor(tmp/1000) - min*60) + " сек!\n"
+			+ "Спасибо за игру! ;)");
+		nodraw = true;
+		//делаем перезагрузку страницы, чтобы начать игру занова
+		window.location.reload();
+	}
 	
 	//инициализация игры под текущий уровень
 	function init(){
 		restart();
-		// $("#person").html("Имя: " + nickname + "; Очки: " + score + "; Уровень: " + (curlvl + 1));
 		$("#name").html("Имя: " + nickname);
 		$("#score").html("Очки: " + score);
 		$("#level").html("Уровень: " + (curlvl + 1));
 
 		$("#title").html("Требуется разрезать квадрат на части (" + 
 		lvls[curlvl][2] + ") используя ограниченное кол-во прямых (" + lvls[curlvl][1] + ")");
-		// $("#info").html("Осталось прямых: " + (lvls[curlvl][1] - lines.length) + "; Кол-во частей: " + hulls.length);
 		$("#lines").html("Осталось прямых: " + (lvls[curlvl][1] - lines.length));
 		$("#parts").html("Кол-во частей: " + hulls.length);
 
@@ -152,6 +162,11 @@ $(document).ready(function(){
 		drawpoly()
 	}
 	
+	//нажали на перезапуск
+	$("#pass").click(function (e) {
+		endgameifpass();
+	});
+
 	//нажали на перезапуск
 	$("#restart").click(function (e) {
 		if(kx > 0 || ks > 0){
