@@ -9,11 +9,10 @@ $(document).ready(function(){
 	var curlvl = 0; //текущий уровень
 	var score = 0; //кол-во очков набранных за игру
 	var nodraw = false; //можно рисовать на canvas или нельзя
-	var nickname = prompt("Укажите ваше имя: "); //никнейм
+	var nickname; //никнейм
 	//если пропустили ввод
 	if(nickname == null) nickname = "User"
 	var lvls = [[0,3,7],[0,4,11],[2,5,16],[2,6,20],[1,6,22]]; //уровень : [время, кол-во прямых, кол-во областей]
-	// var lvls = [[5,3,7]]; //уровень : [время, кол-во прямых, кол-во областей]
 	var lines = []; //текущий список прямых
 	var hulls = []; //области образованные линиями
 	var colors = []; //случайные цвета
@@ -26,8 +25,36 @@ $(document).ready(function(){
               [150,150,150,-150],
              [150,-150,-150,-150]]; //исходные точки квадрата
 	var sqqaff = affine(sqq); //сразу переводим в экранные координаты
-	init(); //инициализация уровня
+
+	//для ввода имени
+	document.querySelector('.next-btn').addEventListener('click', ()=>
+	{
+		nickname = document.querySelector('.inpt').value;
+		if(nickname == ""){
+			nickname = "User";
+		}
+		
+		document.querySelector('.name-container').classList.add('hide');
+		document.querySelector('.main-container').classList.remove('hide');
+
+		init();
+	}, false)
+
+	//если закончилась игра
+	document.querySelector('.endgame').addEventListener('click', ()=>
+	{
+		document.querySelector('.main-container').classList.add('hide');
+		document.querySelector('.end-container').classList.remove('hide');
+
+		document.querySelector('.text').innerText=endgameifpass();
+	}, false)
 	
+	//начинаем с начала
+	document.querySelector('.end-btn').addEventListener('click', ()=>
+	{
+		window.location.reload();
+	}, false)
+
 	//считаем кол-во пересечений прямой с квадратом
 	function calcPoints(x0,y0,x1,y1){
 		//проходим по каждой стороне квадрата
@@ -89,23 +116,20 @@ $(document).ready(function(){
 		let tmp = new Date() - gameTimer;
 		let min = Math.floor(tmp/60000);
 		curlvl = 0;
-		alert("Поздравляем вы успешно прошли все уровни!\n"
+		return "Поздравляем!\n" 
+			+ "Вы успешно прошли все уровни!\n"
 			+ "Вам удалось набрать " + score + " очков "
-			+ "за " + min + " мин " + (Math.floor(tmp/1000) - min*60) + " сек!");
-		nodraw = true;
+			+ "за " + min + " мин " + (Math.floor(tmp/1000) - min*60) + " сек!";
 	}
 
 	//конец игры если сдались
 	function endgameifpass(){
 		let tmp = new Date() - gameTimer;
 		let min = Math.floor(tmp/60000);
-		alert("Вам удалось дойти до " + (curlvl + 1) + " уровня!\n"
+		return "Вам удалось дойти до " + (curlvl + 1) + " уровня!\n"
 			+ "Вы набрали " + score + " очков "
 			+ "за " + min + " мин " + (Math.floor(tmp/1000) - min*60) + " сек!\n"
-			+ "Спасибо за игру! ;)");
-		nodraw = true;
-		//делаем перезагрузку страницы, чтобы начать игру занова
-		window.location.reload();
+			+ "Спасибо за игру! ;)";
 	}
 	
 	//инициализация игры под текущий уровень
@@ -132,8 +156,11 @@ $(document).ready(function(){
 		curlvl++;
 		//дошли до последнего уровня
 		if(curlvl == lvls.length){
-			endgame();
-			$("#restart").val("Начать заново");
+			// endgame();
+			// $("#restart").val("Начать заново");
+			document.querySelector('.main-container').classList.add('hide');
+			document.querySelector('.end-container').classList.remove('hide');
+			document.querySelector('.text').innerText=endgame();
 		}
 		else{
 			init();
@@ -162,10 +189,10 @@ $(document).ready(function(){
 		drawpoly()
 	}
 	
-	//нажали на перезапуск
-	$("#pass").click(function (e) {
-		endgameifpass();
-	});
+	// //нажали на перезапуск
+	// $("#pass").click(function (e) {
+	// 	endgameifpass();
+	// });
 
 	//нажали на перезапуск
 	$("#restart").click(function (e) {

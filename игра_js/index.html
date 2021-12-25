@@ -10,38 +10,57 @@
 </head>
 
 <body>
-    <div class="header">
-        <div id="name"></div>  
-        <div id="score"></div>        
-        <div id="level"></div>              
-    </div>
-    <div class="wrapper">
-        <div class="task">
-            <div id="title"></div>        
-        </div>
-
-        <div class="info">
-            <div id="lines"></div>
-            <div id="parts"></div>
-        </div>
-
-        <div id="timer"></div>        
-    </div>
-
-    <div class="pass">
-        <input type="button" value="Сдаюсь!" id="pass">
-    </div>
-
-    <div class="main">
-        <canvas width="600" height="470" id="Canvas">
-        </canvas>
-
-        <div class="interface">
-            <input type="button" value="Перезапустить уровень" id="restart">
-            <input type="button" value="На следующий уровень" id="nextlvl" hidden>
+    <div class="name-container">
+        <div class="login-page">
+            <input class="inpt" type="text" placeholder='Введите имя'>
+            <button class="next-btn">
+                <p>Продолжить</p>
+            </button>
         </div>
     </div>
 
+    <div class="main-container hide">
+        <div class="header">
+            <div id="name"></div>  
+            <div id="score"></div>        
+            <div id="level"></div>              
+        </div>
+        <div class="wrapper">
+            <div class="task">
+                <div id="title"></div>        
+            </div>
+
+            <div class="info">
+                <div id="lines"></div>
+                <div id="parts"></div>
+            </div>
+
+            <div id="timer"></div>        
+        </div>
+
+        <div class="pass">
+            <input class="endgame" type="button" value="Сдаюсь!">
+        </div>
+
+        <div class="main">
+            <canvas width="600" height="470" id="Canvas">
+            </canvas>
+
+            <div class="interface">
+                <input type="button" value="Перезапустить уровень" id="restart">
+                <input type="button" value="На следующий уровень" id="nextlvl" hidden>
+            </div>
+        </div>
+    </div>
+
+    <div class="end-container hide">
+        <div class="endgame-page">
+            <p class="text"></p>
+            <button class="end-btn">
+                <p>Начать c начала!</p>
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
